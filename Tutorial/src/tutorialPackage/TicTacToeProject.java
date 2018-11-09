@@ -86,13 +86,13 @@ public class TicTacToeProject {
   	@return true if player won, false otherwise
    */
    public static boolean win(char[][] board, char token)	{
-	   boolean condition = true;
+	   boolean condition = false;
 	   System.out.println(board);
 	   if (wonStraightLines(board,token) == true)	{
-		   condition = false;
+		   condition = true;
 	   }
 	   else if (wonDiagonal(board,token) == true) {
-		   condition = false;
+		   condition = true;
 	   }
 	   return condition;
    }
@@ -113,9 +113,9 @@ public class TicTacToeProject {
 //comment each line of the main method
    public static void main(String[] args)	{
   	Scanner in = new Scanner(System.in);
-  	char[ ][] board = new char[3][3];
+  	char[][] board = new char[3][3];
  
-  	int player = 2;
+  	char player = 2;
  
   	drawBoard(board);
   	while (!win(board, player))
