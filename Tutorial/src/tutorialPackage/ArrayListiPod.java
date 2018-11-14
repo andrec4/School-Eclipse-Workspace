@@ -35,27 +35,37 @@ public class ArrayListiPod {
 			
 			Scanner sc = new Scanner(System.in);
 			int choice = sc.nextInt();
-
-			if (choice == 1) {
+			
+			switch (choice)	{
+			case 1:
 				sc.nextLine();
 				System.out.println("Enter title");
 				allSongs.add(sc.nextLine());
 				System.out.println("Enter artist name");
 				artists.add(sc.nextLine());
-			}
-			else if (choice == 2)	{//delete from library
-				System.out.println("Emter song number to delete");
-				allSongs.remove(sc.nextInt()-1);
-				artists.remove(sc.nextInt()-1);
-			}
-			else if (choice == 3) {
+				break;
+			case 2:
+				System.out.println("Enter song number to delete");
+				int delete = sc.nextInt();
+				sc.nextLine();
+				allSongs.remove(delete);
+				artists.remove(delete);
+				break;
+			case 3:
 				System.out.println("What song number would you like to add?");
 				partyPlayList.add(allSongs.get(sc.nextInt()-1));
 				System.out.println(partyPlayList);
-			}
-			else if (choice == 4) {
+				break;
+			case 4:
+				System.out.println("Cya!");
+				break;
+			default :
+				System.out.println("Invalid choice");
 				break;
 			}
+
+			
+			
 		}
 	}//end main
 

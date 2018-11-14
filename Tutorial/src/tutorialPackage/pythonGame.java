@@ -1,25 +1,29 @@
 package tutorialPackage;
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
 public class pythonGame {
+	
+	public static void variablies()	{
 
 	Random rand = new Random();}
-	Scanner sc = new Scanner( System.in );
+	static Scanner sc = new Scanner( System.in );
 
 	System.out.println("This game will be based on your choices.");
 	// System.out.printlns "This game will be based on your choices."
 	System.out.println("Choose Wisely.");
 	// System.out.printlns "Choose Wisely."
+	}
 
 	int UserHP= 50;
 	// sets UserHP to 50
-	Backpack = []
+	static ArrayList<String> backpack = new ArrayList<String>();
 	// makes a backpack which will be filled with items during gameplay
 
-	public static void YourRoom();}	{
+	public static void YourRoom()	{
 	// creates YourRoom with no arguments  
 	  System.out.println("Your name is Rebly.");
 	  //System.out.printlns Your name is Rebly
@@ -56,7 +60,7 @@ public class pythonGame {
 	  // if the choice == 1 continues  
 	    window1();}
 	    // continues through window01
-	  if (choice == 2);	{
+	  else if (choice == 2);	{
 	  // if the choice is 2 continues
 	    door1();}
 	    // continues through door01
@@ -66,8 +70,7 @@ public class pythonGame {
 	    System.out.println ("Invalid choice, Try again");
 	    // System.out.printlns Invalid choice, Try again
 	    YourRoom();}
-	  }
-	  }
+	  
 
 	public static void window1() {
 	//public static voidines window01 with no arguments
@@ -75,7 +78,7 @@ public class pythonGame {
 	    //System.out.printlns You die from the fall. Bad choice
 	   Thread.sleep(3);
 	    //sleeps the program for 3 seconds
-	    YourRoom()}
+	    YourRoom();}
 	    //calls YourRoom so it goes back to the beginning
 	public static void door1() {
 	//public static voidines door1 with no arguments 
@@ -96,11 +99,11 @@ public class pythonGame {
 	  //if the userchoice is equal to "Go" continue
 	    basement1();}
 	    // calls basement1();}
-	  else if (choice == 2);	{
+	   if (choice == 2);	{
 	  // else if the choice is equal to "Stay" continue
 	    kitchen1();}
 	    // calls kitchen1();}
-	  else {
+	   {
 	  // if the anwser is something either than "Go" or "Stay" continue
 	    System.out.println ("Invalid choice, Try again");
 	    // System.out.printlns "Invalid choice, Try again"
@@ -108,7 +111,7 @@ public class pythonGame {
 	    // calls door1();}
 	  }
 
-	public static void basement1();} {
+	public static void basement1(){
 	// public static voidines basement1 with nho arguments
 	  System.out.println ("You enter the Basement");
 	  // System.out.printlns "You enter the Basement"
@@ -127,26 +130,26 @@ public class pythonGame {
 	 Thread.sleep(3);
 	  // sleeps the program for 3 seconds
 	  System.out.println("Say 1 to take clothes. Say 2 to leave them");
-	  int choice = sc.nextInt();}
+	  int choice = sc.nextInt();
 	  // makes the choice variable and System.out.printlns "Say yes to take clothes. Say no to leave them"
-	  if (choice == 1 and "Clothes" not in Backpack);	{
+	  if (choice == 1 && backpack.contains("Clothes"))	{
 	  // if the user choice equals to Yes and clothes are not in the variable Backpack continue  
-	    if ("Clothes" in Backpack);	{
+	    if (backpack.contains("Clothes"))	{
 	    // if Clothes are in Backpack continue  
 	      System.out.println ("You already have clothes. Why would you need more?");
 	      // System.out.printlns "You already have clothes. Why would you need more?"
 	    }
-	    if ("Clothes" not in Backpack);	{
+	    if (backpack.contains("Clothes"));	{
 	    // if Clothes are not in Backpack continue
-	      Backpack.append("Clothes");
+	      backpack.add("Clothes");
 	      // goes to Backpack and adds the Item "Clothes to it"
-	    }
+	    }}
 	    else if (choice == 2);	{
 	  // if the user choice is equal to No continue  
 	    System.out.println ("Thats alright, I also like being without clothes");
 	    // System.out.printlns Thats alright, I also like being without clothes
 	    }
-	  else	{
+	  	{
 	  // if anything other than 'No' or 'no' or 'Yes' or 'yes' continue
 	    System.out.println ("I don't think you understood the question");
 	    //System.out.printlns "I don't think you understood the question"
@@ -154,7 +157,7 @@ public class pythonGame {
 	    //sleeps the program for 3 seconds
 	    basement1();}
 	    //calls the function basement1();} to go to it
-	  }
+	  
 	  System.out.println ("You suddenly remember your dad had a safe with guns.");
 	  //System.out.printlns You suddenly remember your dad had a safe with guns.
 	 Thread.sleep(3);
@@ -172,7 +175,7 @@ public class pythonGame {
 	  // 1. Continue Through the door anyways.
 	  // 2. Go back to the kitchen
 	  System.out.println("Say 1 to Continue, or Say 2 to go Back");
-	  int choice = sc.nextInt();}
+	  choice = sc.nextInt();
 	  // creates the variable choice and System.out.printlns "Say 1 to Continue, or Say 2 to go Back"
 	  if (choice == 1);	{
 	  // if the choice is equal to 1 continue 
@@ -180,15 +183,13 @@ public class pythonGame {
 	    // System.out.printlns "Might as well go since we're down here."
 	    gunroom();}
 	    // calls gunroom();} to go there
-	  }
-	  else if (choice == 2); {
+	   if (choice == 2); {
 	  // else if the choice is equal to 2 continue  
 	    System.out.println ("I'm not going to take that chance, it might be too loud.");
 	    // System.out.printlns "I'm not going to take that chance, it might be too loud."
 	    kitchen1();}
 	    //calls kitchen1();} to go to that function
-	  }
-	  else	{
+    	{
 	  // if the choice is anything other than 1 or 2 continue  
 	    System.out.println ("Invalid choice, maybe you didn't understand?");
 	    // System.out.printlns "Invalid choice, maybe you didn't understand?"
@@ -197,7 +198,7 @@ public class pythonGame {
 	    basement1();}
 	    // calls the basement1();} function to go there
 	  }
-	public static void kitchen1();} {
+	public static void kitchen1() {
 	// public static voidines Kitchen1 with no arguments
 	  System.out.println ("You return to the kitchen.");
 	  //System.out.printlns You return to the kitchen
@@ -206,7 +207,8 @@ public class pythonGame {
 	  System.out.println ("You have to make a choice whether to leave the house and find people, or stay and make a hideout?");
 	  //System.out.printlns "You have to make a choice whether to leave the house and find people, or stay and make a hideout?"
 	  
-	  choice = int(input("Enter 1 to leave, or Enter 2 to Stay");
+	  int choice = sc.nextInt();
+	  sc.nextLine();
 	  // creates the variable choice and System.out.printlns "Enter Leave to leave, or Enter Stay to Stay"
 	  if (choice ==1) {
 	  // if the user choice is equal to 'Leave' or 'leave' continue
@@ -254,7 +256,7 @@ public class pythonGame {
 	    // System.out.printlns "You require 21 wood to complete the house, you only have enough energy to take apart 1 item."
 	   Thread.sleep(3);
 	    // sleeps the program for 3 seconds
-	    choice = int(input("Enter 1 for chair's, 2 for table's, 3 for Cabinets");
+	    choice = sc.nextInt();
 	    // creates the variable choice and System.out.printlns "Enter Ch for chair's, T for table's, C for Cabinets"
 	    if (choice ==1) {
 	    // if the user choice equals to 1 continue
@@ -308,7 +310,7 @@ public class pythonGame {
 	      // sleeps the program for 3 seconds
 	      System.out.println ("I think you deserve some well rest, you'll continue tomorrow.");
 	      // System.out.printlns "I think you deserve some well rest, you'll continue tomorrow."
-	      sleep (4);
+	      Thread.sleep (4);
 	      // sleeps the program for 4 seconds
 	      wakeup();}
 	      // calls the function wakeup();} to go to it
@@ -324,7 +326,7 @@ public class pythonGame {
 	      // sleeps the program for 2 seconds
 	      kitchen1();}
 	      // calls the function kitchen1();} to go back to it
-	  else {
+	   {
 	  // if anything else is typed other than 1 or 2 continue
 	    System.out.println("I don't think you understood the question.");
 	    // System.out.printlns "I dont think you understood the question."
@@ -334,10 +336,10 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(2);
 	    //sleeps the program for 2 seconds
-	    kitchen1();}
+	    kitchen1();}}
 	    // calls the function kitchen1();} to go back to it
 
-	public static void wakeup();} {
+	public static void wakeup() {
 	// public static voidines the fuction wakeup();}
 	  System.out.println ("Yawwwwn!");
 	  // System.out.printlns Yawwwwn!
@@ -346,7 +348,8 @@ public class pythonGame {
 	  System.out.println ("That was a good rest don't you think?");
 	  // System.out.printlns "That was a good rest don't you think?"
 	  
-	  choice=int(input("Enter 1 for Yes, or 2 for No");
+	 int choice = sc.nextInt();
+	 sc.nextLine();
 	  // creates the function choice and System.out.printlns "Enter 1 for Yes, or 2 for No"
 	  if (choice ==1) {
 	  // if the user choice is equal to 1 continue
@@ -359,7 +362,8 @@ public class pythonGame {
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
 	    
-	    choice=int(input("Enter 1 to continue, or 2 to stop");
+	   choice = sc.nextInt();
+		 sc.nextLine();
 	    // creates the variable choice and System.out.printlns "Enter 1 to continue, or 2 to stop"
 	   if (choice ==1) {
 	    // if the user choice is equal to 1 continue
@@ -370,7 +374,7 @@ public class pythonGame {
 	      journeycontinue();}
 	      // calls the function journeycontinue to continue to it
 	    
-	    elif choice== 2:
+	   else if (choice== 2)	{
 	    // else if the choice is equal to 2 continue
 	      System.out.println("You stopped the journey.");
 	      // System.out.printlns "You stopped the journey"
@@ -396,7 +400,7 @@ public class pythonGame {
 	      // System.out.printlns "Try again"
 	     Thread.sleep(2);
 	      // sleeps the program for 2 seconds
-	      wakeup();}
+	      wakeup();}}
 	      // calls the function wake up to go back to it
 	  
 	  else if (choice == 2) {
@@ -416,7 +420,7 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
-	    wakeup();}
+	    wakeup();}}
 	    // calls the function wakeup();} to continue to it
 
 	public static void journeycontinue() {
@@ -433,7 +437,8 @@ public class pythonGame {
 	  // System.out.printlns "What would you like to dismantle first?"
 	 Thread.sleep(2);
 	  //sleeps the program for 2 seconds
-	  choice= int(input("Enter 1 for Tables, or 2 for chairs");
+	  int choice= sc.nextInt();
+	  sc.nextLine();
 	  // creates the variable choice and System.out.printlns "Enter 1 for Tables, or 2 for chairs"
 	 if (choice ==1) {
 	  // if the user choice is equal to 1 continue
@@ -489,7 +494,8 @@ public class pythonGame {
 	 Thread.sleep(2);
 	  // sleeps the program for 2 seconds
 	  
-	  choice=int(input("Enter 1 to go, or 2 to stay");
+	  System.out.println("Enter 1 to go, or 2 to stay");
+	  int choice = sc.nextInt();
 	  // creates the variable choice and asks System.out.printlns "Enter 1 to go, or 2 to stay"
 	  if (choice ==1) {
 	  // if the choice is equal to 1 continue
@@ -511,7 +517,7 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(3);
 	    // sleeps the program for 3 seconds
-	    secretpassageentrance();}
+	    secretpassageentrance();}}
 	    // calls the function secretpassageenetrance to go to it
 
 	public static void secretpassage() {
@@ -533,7 +539,8 @@ public class pythonGame {
 	 Thread.sleep(3);
 	  // sleeps the program for 3 seconds
 	  
-	  choice= int(input("Enter 1 for door 1, 2 for door 2, 3 for door 3, or 4 to leave.");
+	  System.out.println("Enter 1 for door 1, 2 for door 2, 3 for door 3, or 4 to leave.");
+	  int choice = sc.nextInt();
 	  // creates the variable choice and System.out.printlns "Enter 1 for door 1, 2 for door 2, 3 for door 3, or 4 to leave."
 	 if (choice ==1) {
 	  // if the user choice is equal to 1 continue
@@ -591,7 +598,7 @@ public class pythonGame {
 	   Thread.sleep(3);
 	    // sleeps the program for 3 seconds
 	    System.out.println("Enter 1 for Yes, or 2 to go back to secret passage.");
-	    int choice = sc.nextInt();
+	    choice = sc.nextInt();
 	    // creates the variable choice and System.out.printlns "Enter 1 for Yes, or 2 to go back to secret passage."
 	    if (choice ==1) {
 	    // if the user choice is equal to 1 continue
@@ -619,7 +626,7 @@ public class pythonGame {
 	      // System.out.printlns "Try again"
 	     Thread.sleep(2);
 	      // sleeps the program for 2 seconds
-	      secretpassage();}
+	      secretpassage();}}
 	      // calls the function secretpassage();} to go to it
 	  else {
 	  // if the user choice is something other than 1, 2, 3 or 4 continue
@@ -631,10 +638,10 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
-	    secretpassage();}
+	    secretpassage();}}
 	    // calls the function secretpassage();} to go to it
 
-	public static void knockknock();} {
+	public static void knockknock() {
 	// public static voidines the variable knockknock();}  
 	  System.out.println ("You hear a knock coming from the door.");
 	  // System.out.printlns "You hear a knock coming from the door."
@@ -645,7 +652,9 @@ public class pythonGame {
 	 Thread.sleep(1);
 	  // sleeps the program for 1 seconds
 	  
-	  choice=int(input("Enter 1 to open the door, or 2 to keep it closed");
+	  System.out.println("Enter 1 to open the door, or 2 to keep it closed");
+	  int choice = sc.nextInt();
+	  sc.nextLine();
 	  // creates the variable choice and System.out.printlns "Enter 1 to open the door, or 2 to keep it closed"
 	  if (choice ==1) {
 	  // if the choice is equal to 1 continue
@@ -671,7 +680,7 @@ public class pythonGame {
 	    // sleeps the program for 2 seconds
 	    Endgame();}
 	    // calls the function Endgame();} to continue to it
-	  elif choice== 2:
+	  else if (choice== 2) {
 	  // else if the choice is equal to 2 continue
 	    System.out.println ("The noise is getting louder.");
 	    // System.out.printlns "The noise is getting louder."
@@ -692,7 +701,7 @@ public class pythonGame {
 	    System.out.println ("You're going to have to make a choice whether to open the door or not.");
 	    // System.out.printlns "You're going to have to make a choice whether to open the door or not."
 	    System.out.println("Enter 1 to open Door, Enter 2 to keep it closed.");
-	    int choice= sc.nextInt();
+	    choice= sc.nextInt();
 	    // creates variable choice and System.out.printlns "Enter 1 to open Door, Enter 2 to keep it closed."
 	   if (choice ==1) {
 	    // if the choice is equal to 1 continue
@@ -705,7 +714,7 @@ public class pythonGame {
 	     Thread.sleep(2);
 	      // sleeps the program for 2 seconds
 	      System.out.println("Enter 1 to turn handle, Enter 2 to not open.");
-	      int choice= sc.nextInt();
+	      choice= sc.nextInt();
 	      // creates the variable choice and System.out.printlns "Enter 1 to turn handle, Enter 2 to not open"
 	      if (choice ==1) {
 	      // if the user choice is equal to 1 continue
@@ -768,7 +777,7 @@ public class pythonGame {
 	      // calls the function knockknock();} to go to it.
 	}
 
-	public static void Bustdoor();} {
+	public static void Bustdoor() {
 	// public static voidines the function Bustdoor();} {
 	  System.out.println ("The door gets busted down.");
 	  // System.out.printlns "The door gets busted down."
@@ -783,7 +792,7 @@ public class pythonGame {
 	    
 	  
 
-	public static void gunroom();} {
+	public static void gunroom() {
 	// public static voidines the variable gunroom();}  
 	  System.out.println ("Ok, you don't have to continue if you dont want to.");
 	  // System.out.printlns "Ok, you don't have to continue if you dont want to."
@@ -794,7 +803,7 @@ public class pythonGame {
 	  // 1. Turn the handle and take the chance of the alarm going off?
 	  // 2. Return to the kitchen?
 	  System.out.println("Enter 1 to enter the room, Enter 2 to return to kitchen");
-	  int choice = sc.nextInt();}
+	  int choice = sc.nextInt();
 	  // creates the variable choice and System.out.printlns "Enter 1 to enter the room, Enter 2 to return to kitchen"
 	  if (choice == 1) {
 	  // if the user choice equals to 1 continue 
@@ -822,11 +831,11 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(1);
 	    // sleeps the program for 1 seconds
-	    gunroom();}
+	    gunroom();}}
 	    // calls the function gunroom();} to go to it
 	    
 
-	public static void gunroominside();} {
+	public static void gunroominside() {
 	// public static voidines gun room inside
 	  System.out.println ("Quickly! Grab a gun! THE ZOMBIES ARE COMING!");
 	  // System.out.printlns "Quickly! Grab a gun! THE ZOMBIES ARE COMING!"
@@ -837,32 +846,39 @@ public class pythonGame {
 	  // 1: Pistol
 	  // 2: Shotgun
 	  
-	  choices = int(input("Enter 1 for Pistol, Enter 2 for Shotgun");
+	  System.out.println("Enter 1 for Pistol, Enter 2 for Shotgun");
+	  int choice = sc.nextInt();
+	  sc.nextLine();
+	  int choices = sc.nextInt();
 	  // creates the variable choices and System.out.printlns "Enter 1 for Pistol, Enter 2 for Shotgun"
-	  if choices == "1" and "Pistol" not in Backpack:
+	  if (choices == 1 && backpack.contains("Pistol"))	{
 	  // if the user choice is equal to 1 and Pistol is not in Backpack continue
-	    if "Pistol" in Backpack:
+	    if (backpack.contains("Pistol")) {
 	    // if "Pistol" is already in the variable Backpakc continue
 	      System.out.println ("You already have a Pistol you goof!");
 	      // System.out.printlns "You already have a Pistol you goof!"
-	    if "Pistol" not in Backpack:
+	    }
+	    if (!backpack.contains("Pistol"))	{
 	    // if "Pistol" is not in the variable Backpack continue
 	      System.out.println ("Good choice, flexible gun with lots of options!");
 	      //System.out.printlns "Good choice, flexible gun with lots of options!"
-	      Backpack.append("Pistol");
+	      backpack.add("Pistol");
+	    }
 	      // Adds the String Pistol to The variable Backpack
-	  elif choices == "2" and "Shotgun" not in Backpack:
+	    else if (choices == 2 && backpack.contains("Shotgun"))	{
 	  // else if the user choice is equal to 2 and Shotgun is not in Backpack continue
-	    if "Shotgun" in Backpack:
+	    if (backpack.contains("Shotgun"))	{
 	    // if the "Shotgun" string is in Backpack continue
 	      System.out.println ("You already have a Pistol you goof!");
 	      // System.out.printlns "You already have a Pistol you goof!"
-	    if "Shotgun" not in Backpack:
+	    }
+	    if (!backpack.contains("Shotgun"))	{
 	    // if "Shotgun" string is not in Backpack continue
 	      System.out.println ("Good choice, Easy kills with this bad boy!");
 	      // System.out.printlns "Good choice, Easy kills with this bad boy!"
-	      Backpack.append("Shotgun");
+	      backpack.add("Shotgun");
 	      // Adds the string "Shotgun" to the variable Backpack
+	    }
 	  else {
 	  // if something else other than 1 or 2 is chosen continue
 	    System.out.println ("Wasn't in the choices sorry");
@@ -879,15 +895,18 @@ public class pythonGame {
 	  System.out.println ("Are you going to run? Or are you going to fight?");
 	  //System.out.printlns "Are you going to run? Or are you going to fight?"
 	  
-	  choice = int(input("Enter 1 to Run, or Enter 2 to fight!");
+	  System.out.println("Enter 1 to Run, or Enter 2 to fight!");
+	  choice = sc.nextInt();
+	  sc.nextLine();
 	  // makes the variable choice and System.out.printlns "Enter 1 to Run, or Enter 2 to fight!"
-	  if choice == 2:
+	  if (choice == 2)	{
 	  // if the user choice is 1 continue
 	    System.out.println ("PREPARE TO FIGHT!!");
 	    // System.out.printlns "PREPARE TO FIGHT!!"
 	    Fightnumber1();}
 	    // calls the function Fightnumber1();} to go to it
-	  elif (choice ==1) {
+	    }
+	    else if (choice ==1) {
 	  // else if the choice is equal to 2 continue
 	    System.out.println ("You run right into the hoard of zombies and get caught.");
 	    // System.out.printlns "You run right into the hoard of zombies and get caught."
@@ -909,10 +928,10 @@ public class pythonGame {
 	    // System.out.printlns "Try again"
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
-	    gunroominside();}
+	    gunroominside();}}}
 	    // calls the function gunroominside();} to go back to it
 
-	public static void Fightnumber1();} {
+	public static void Fightnumber1() {
 	//public static voidines Fightnumber1 with no parameters
 	  System.out.println ("Intense music incoming!");
 	  // System.out.printlns "Intense music incoming!"
@@ -922,7 +941,8 @@ public class pythonGame {
 	  // System.out.printlns "First zombie coming"
 	 Thread.sleep(2);
 	  // sleeps the program for 2 seconds
-	  choice = int(input("Enter 1 to shoot in the head or 2 in the chest");
+	  System.out.println("Enter 1 to shoot in the head or 2 in the chest");
+	  int choice = sc.nextInt();
 	  // creates the variable choice and asks the user "Enter 1 to shoot in the head"
 	  if (choice ==1) {
 	  // if the choice is equal to 1 continue
@@ -934,10 +954,10 @@ public class pythonGame {
 	    // System.out.printlns "They all die"
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
-	    System.out.println ("Congratulations");
+	    System.out.println ("Congratulations");}}
 	    // System.out.printlns Congratulations
 	  
-	public static void Endgame();} {
+	public static void Endgame() {
 	// public static voidines function Endgame();}
 	  System.out.println ("Congratulations!");
 	  // System.out.printlns "Congratulations!"
@@ -960,7 +980,8 @@ public class pythonGame {
 	 Thread.sleep(3);
 	  // sleeps the program for 3 seconds
 	  
-	  choice = int(input("Enter 1 to play again or 2 to End.");
+	  System.out.println("Enter 1 to play again or 2 to End.");
+	  int choice = sc.nextInt();
 	  // creates the variable choice and System.out.printlns "Enter 1 to play again or 2 to End."
 	  if (choice ==1) {
 	  // if the user choice is equal to 1 continue
@@ -976,7 +997,7 @@ public class pythonGame {
 	    // System.out.printlns "Ok that's Fine!"
 	   Thread.sleep(2);
 	    // sleeps the program for 2 seconds
-	    System.out.println ("Just press the Stop◻️ button at the top");
+	    System.out.println ("Just press the Stop◻️ button at the top");}
 	    // System.out.printlns "Just press the Stop◻️ button at the top"
 	  else {
 	  // if user choice is anything other than 1 or 2 continue
@@ -991,10 +1012,10 @@ public class pythonGame {
 	    Endgame();}
 	    // calls the function Endgame();} to go to it.
 	  }
-	public static void play_game();} {
+	public static void play_game() {
 
 YourRoom();}
 // calls the function YourRoom();} which untimately starts the whole game
 	}
 
-}
+
