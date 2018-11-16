@@ -102,29 +102,21 @@ public class TicTacToeProject {
   	@param board the gameboard filled with 0, 1, or 2s
    */
    public static void drawBoard(char[][] board)	{
-	   int x = 0;
-	   if (x == 0) {
 		   for	(int row=0;row<board.length;row++)	{
 				for (int col = 0; col<board[row].length;col++)	{
-					board[row][col] = '0';
-					 System.out.print(board[row][col]);
+					if	(board[row][col] == 'x' || board[row][col] == 'o') {
+						
+					}
+					else	{
+						board[row][col] = '0';
+					}
+					System.out.print(board[row][col]);
 				}
-				System.out.println();
-				x+=1;
-				System.out.println(x);
+			System.out.println();
 			}
 
-	   }
-	   else	{
-		   for	(int row=0;row<board.length;row++)	{
-				for (int col = 0; col<board[row].length;col++)	{
-					 System.out.print(board[row][col]);
-				}
-				System.out.println();
-		   }
-	   }
-	   x+=1;
    }
+	  
    
   
 //comment each line of the main method
