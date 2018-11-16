@@ -102,18 +102,36 @@ public class TicTacToeProject {
   	@param board the gameboard filled with 0, 1, or 2s
    */
    public static void drawBoard(char[][] board)	{
-	   for	(int row=0;row<board.length;row++)	{
-			for (int col = 0; col<board[row].length;col++)	{
-				 System.out.print(board[row][col]);
+	   int x = 0;
+	   if (x == 0) {
+		   for	(int row=0;row<board.length;row++)	{
+				for (int col = 0; col<board[row].length;col++)	{
+					board[row][col] = '0';
+					 System.out.print(board[row][col]);
+				}
+				System.out.println();
+				x+=1;
+				System.out.println(x);
 			}
-			System.out.println();
+
 	   }
+	   else	{
+		   for	(int row=0;row<board.length;row++)	{
+				for (int col = 0; col<board[row].length;col++)	{
+					 System.out.print(board[row][col]);
+				}
+				System.out.println();
+		   }
+	   }
+	   x+=1;
    }
+   
   
 //comment each line of the main method
    public static void main(String[] args)	{
   	Scanner in = new Scanner(System.in);
-  	char[][] board = new char[3][3];
+  	char[ ][] board = new char[3][3];
+
  
   	char player = 2;
  
@@ -135,7 +153,7 @@ public class TicTacToeProject {
       	int column = in.nextInt();
 
       	if(player == 1){
-	     board[row][column] = 'x';
+      		 board[row][column] = 'x';
 		 }else if(player == 2){
 		     board[row][column] = 'o';
 		 }
