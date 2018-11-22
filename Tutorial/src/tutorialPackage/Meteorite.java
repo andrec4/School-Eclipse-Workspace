@@ -1,7 +1,7 @@
 package tutorialPackage;
 
 public class Meteorite {
-	String[] powers = {"Flying","Explosion","Morph"};
+	private String[] powers = {"Flying","Explosion","Morph"};
 	public Meteorite()	{}
 	public void mutate(StanLeeTributeSupherHeroClass h) {
 		int r = (int)(Math.random()*powers.length);
