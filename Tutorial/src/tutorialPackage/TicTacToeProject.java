@@ -140,9 +140,9 @@ public class TicTacToeProject {
      	}
  
      	 System.out.println("Player " + player + " choose a row: ");
-      	int row = in.nextInt();
+      	int row = in.nextInt()-1;
     	System.out.println("Player " + player + " choose a column: ");
-      	int column = in.nextInt();
+      	int column = in.nextInt()-1;
 
       	if(player == 1){
       		 board[row][column] = 'x';
