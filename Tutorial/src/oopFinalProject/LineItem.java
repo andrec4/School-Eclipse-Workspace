@@ -10,13 +10,17 @@ public class LineItem {
 		theProduct = new Product();
 	}
 	
-	public LineItem(int q, Product p)	{
+	public LineItem(Product p, int q)	{
 		qty = q;
 		theProduct = p;
 	}
 	
 	public String toString()	{
 		return "Product: "+theProduct+" Quantity: "+qty;
+	}
+	
+	public double getTotalPrice()	{
+		return theProduct.getPrice()*qty;
 	}
 
 }

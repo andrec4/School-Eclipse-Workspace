@@ -4,7 +4,7 @@ public class Customer {
 	
 	private String secretLairLocation;
 	private String name;
-	private int evilFunds;
+	private double evilFunds;
 	
 	public Customer()	{
 		secretLairLocation = "none";
@@ -12,18 +12,22 @@ public class Customer {
 		evilFunds = 0;
 	}
 	
-	public Customer(String n, String base, int money)	{
+	public Customer(String n, String base, double d)	{
 		name = n;
 		secretLairLocation = base;
-		evilFunds = money;
+		evilFunds = d;
 	}
 	
 	public String toString()	{
 		return "Name: "+name+" Lair "+secretLairLocation+" EvilFunds: "+evilFunds;
 	}
 	
-	public int addFunds(int add)	{
+	public double addFunds(double add)	{
 		return evilFunds+=add;
+	}
+	
+	public double getEvilFunds() {
+		return evilFunds;
 	}
 
 }

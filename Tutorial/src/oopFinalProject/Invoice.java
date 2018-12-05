@@ -16,15 +16,36 @@ public class Invoice {
 	}
 	
 	public void addToOrder(Product p,int qty)	{
-		LineItem item1 = new LineItem(qty,p);
+		LineItem item1 = new LineItem(p,qty);
 		items.add(item1);
 	}
 	
-	public void printInVoice()	{
+	public void printInvoice()	{
 		for (int i=0;i<items.size();i++) {
-			System.out.println();
+			System.out.println(items.get(i));
 		}
 	}
+	
+	public double amountDue()	{
+		double total = 0;
+		for (int i = 0;i<items.size();i++)	{
+			LineItem productPrice = items.get(i);
+			total+=productPrice.getTotalPrice();
+		}
+		return total;
+	}
+	
+	public boolean canAfford(Customer theCustomer)	{
+		boolean x = false;
+			if (theCustomer.getEvilFunds()>amountDue()) {
+				x=true;
+			}
+			else	{
+				x=false;
+			}
+		return x;
+	}
+	
 }
 
 
