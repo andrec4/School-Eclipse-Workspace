@@ -1,11 +1,15 @@
 package oopFinalProject;
 
+import java.text.DecimalFormat;
+
 public class TestInvoice {
+	static DecimalFormat formatter = new DecimalFormat("#0.00");     
 	public static void main(String[] args) {
+
 
 		// create 3 additional invoice runs
 		// add at least 5 items to invoice order for each invoice run
-// make sure in at least one of the runs the customer can not afford the purchase
+
 		
 		//invoice run 1
 		Customer c = new Customer("island", "Dr evil", 1230.0);
@@ -31,7 +35,7 @@ public class TestInvoice {
 		if(c.getEvilFunds()- i.amountDue() < 0) {
 			System.out.println("Evil villian credit union to the rescue!!");	
 			c.addFunds(i.amountDue() - c.getEvilFunds());
-			System.out.println("New funds total: " + c.getEvilFunds());
+			System.out.println("New funds total: " + formatter.format(c.getEvilFunds()));
 		}
 		
 		i.printInvoice();

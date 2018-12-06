@@ -1,9 +1,12 @@
 package oopFinalProject;
 
+import java.text.DecimalFormat;
+
 public class Product {
 	
 	private String name;
 	private double price;
+	DecimalFormat formatter = new DecimalFormat("#0.00");     
 	
 	public Product()	{
 		name = "none";
@@ -16,7 +19,7 @@ public class Product {
 	}
 	
 	public String toString()	{
-		return "Name: "+name+" Price: "+price;
+		return "Name: "+name+" Price: "+formatter.format(price);
 	}
 	
 	public double getPrice() {
