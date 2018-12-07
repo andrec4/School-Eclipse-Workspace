@@ -2,6 +2,13 @@ package oopFinalProject;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+
+/**
+ * the invoice
+ * @author Brix Andre Castro
+ * @date 12/7/2018
+ * @version 1 
+ */
 public class Invoice {
 
 	private ArrayList<LineItem> items = new ArrayList<LineItem>();
@@ -17,20 +24,28 @@ public class Invoice {
 	}
 	
 	/**
-	 * 
-	 * @param c
+	 * To initialize values in constructor
+	 * @param c - the customer
 	 */
 	public Invoice(Customer c) {
 		theCustomer = c;
 	}
 	
+	/**
+	 * function to add to item array list
+	 * @param p - the product
+	 * @param qty - the quantity/amount
+	 */
 	public void addToOrder(Product p,int qty)	{
 		LineItem item = new LineItem(p,qty);
 		items.add(item);
 	}
 	
 	
-	
+	/**
+	 * calculates and adds everything in the items array list
+	 * @return - returns the total
+	 */
 	public double amountDue()	{
 		double total = 0;
 		for (int i = 0;i<items.size();i++)	{
@@ -40,6 +55,11 @@ public class Invoice {
 		return total;
 	}
 	
+	/**
+	 * determines whether the customer has enough funds
+	 * @param theCustomer - the customer
+	 * @return - returns if can or cannot buy
+	 */
 	public boolean canAfford(Customer theCustomer)	{
 		boolean x = false;
 			if (theCustomer.getEvilFunds()>amountDue()) {
@@ -51,6 +71,9 @@ public class Invoice {
 		return x;
 	}
 	
+	/**
+	 * prints the invoice
+	 */
 	public void printInvoice()	{
 		
 		for (int i=0;i<items.size();i++) {

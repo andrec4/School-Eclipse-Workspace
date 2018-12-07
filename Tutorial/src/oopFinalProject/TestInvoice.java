@@ -21,11 +21,29 @@ public class TestInvoice {
 		runInvoice(c,in); //runs invoice
 		
 		//invoice run 2
+		Customer MoonMan = new Customer("The Moon", "MoonMan", 123500.0);
+		Invoice MoonManInvoice = new Invoice(MoonMan);
+		MoonManInvoice.addToOrder(new Product("Moon",150.0), 1);
+		MoonManInvoice.addToOrder(new Product("Rovers", 50.0),5);
+		MoonManInvoice.addToOrder(new Product("Satellites",100.0),10);
 		
+		runInvoice(MoonMan,MoonManInvoice); //runs invoice
 		//invoice run 3
+		Customer Jumpage = new Customer("Volcano", "Jumpage", 1000.0);
+		Invoice JumpageInvoice = new Invoice(Jumpage);
+		JumpageInvoice.addToOrder(new Product("Rocket Boots",2000), 3);
+		JumpageInvoice.addToOrder(new Product("Gauntlet Thruster", 200.0),2);
+		JumpageInvoice.addToOrder(new Product("Power Cores",50.0),3);
 		
+		runInvoice(Jumpage,JumpageInvoice); //runs invoice
 		//invoice run 4
+		Customer Bradley = new Customer("Corral Springs", "Dr Rad Brad the Mad", 3000.0);
+		Invoice BradleyInvoice = new Invoice(Bradley);
+		BradleyInvoice.addToOrder(new Product("Acid Bombs",200.0), 5);
+		BradleyInvoice.addToOrder(new Product("Death Ray", 1000.0),1);
+		BradleyInvoice.addToOrder(new Product("Platypus",20.0),50);
 		
+		runInvoice(Bradley,BradleyInvoice); //runs invoice
 	}//end main
 	
 	//do not modify code below
@@ -36,9 +54,10 @@ public class TestInvoice {
 			System.out.println("Evil villian credit union to the rescue!!");	
 			c.addFunds(i.amountDue() - c.getEvilFunds());
 			System.out.println("New funds total: " + formatter.format(c.getEvilFunds()));
+			i.printInvoice();
 		}
 		
-		i.printInvoice();
+		
 	}//end runInvoice
 
 }//end TestInvoice
