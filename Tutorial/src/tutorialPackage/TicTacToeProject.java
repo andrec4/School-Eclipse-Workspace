@@ -51,7 +51,7 @@ public class TicTacToeProject {
 	   if (token == 'x')	{
 		   for	(int u = 0;u<board[0].length;u++)
 			   for	(int i = 0;i<board[1].length;i++) {
-			    if (board[u][board[1].length-1] == 'x')	{
+			    if (board[u][board[1].length] == 'x')	{
 				   	if (board[u][i] == 'x')	{
 				   		
 				   	}
@@ -65,7 +65,7 @@ public class TicTacToeProject {
 	   else if	(token == 'o')	{
 		   for	(int u = 0;u<board[0].length;u++)
 			   for	(int i = 0;i<board[1].length;i++) {
-			    if (board[u][board[1].length-1] == 'o')	{
+			    if (board[u][board[1].length] == 'o')	{
 				   	if (board[u][i] == 'o')	{
 				   		
 				   	}
@@ -139,15 +139,31 @@ public class TicTacToeProject {
         	  player = 1;
      	}
  
-     	 System.out.println("Player " + player + " choose a row: ");
+     	 System.out.println("Player " + (int)player + " choose a row: ");
       	int row = in.nextInt()-1;
-    	System.out.println("Player " + player + " choose a column: ");
+    	System.out.println("Player " + (int)player + " choose a column: ");
       	int column = in.nextInt()-1;
 
       	if(player == 1){
-      		 board[row][column] = 'x';
+      		if (board[row][column] == 'x')	{
+
+      		}
+      		else if (board[row][column] == '0')	{
+         		 board[row][column] = 'x';
+      		}
+      		else	{
+      			System.out.println("There is already a marker there!");
+      		}
 		 }else if(player == 2){
-		     board[row][column] = 'o';
+			 if (board[row][column] == 'o')	{
+
+			 }
+			 else if (board[row][column] == '0') {
+			     board[row][column] = 'o';
+			 }
+			 else	{
+				 System.out.println("There is already a marker there!");
+			 }
 		 }
       	drawBoard(board);
    	}//end while
