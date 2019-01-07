@@ -1,6 +1,6 @@
 package tutorialPackage;
 import java.util.Scanner;
-
+//I for some reason named this Assign3Marks, its the store revisited
 public class Assign3Marks {
 
 	

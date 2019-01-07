@@ -41,8 +41,8 @@ public static void YourRoom() {
   //Thread.sleep(3);
   //Thread.sleeps the program for 3 seconds
   System.out.println("Your options are\n"
-  +"1: Jump out the Window(Potential Danger\n"
-  +"2: Walk out of the Room(Potential Danger");
+  +"1: Jump out the Window(Potential Danger)\n"
+  +"2: Walk out of the Room(Potential Danger)");
   //prints "Your options are
   //1: Jump out the Window(Potential Danger)
   //2: Walk out of the Room(Potential Danger)
